@@ -14,15 +14,15 @@ AUTHOR_EMAIL = 'sairamnaidu694@gmail.com'
 setuptools.setup(
     name = SRC_REPO,
     version=__version__,
-    AUTHOR_USER_NAME = AUTHOR_USER_NAME,
-    AUTHOR_EMAIL = AUTHOR_EMAIL,
-    description='This is small python package',
+    author = AUTHOR_USER_NAME,
+    author_email = AUTHOR_EMAIL,
+    description='This is small python package for CNN App',
     long_description=long_description,
     long_description_content = 'text/markdown', 
-    package_dir={'':'src'},
     url=f"https://github.com/{AUTHOR_USER_NAME}/{REPO_NAME}",
     project_urls={
         "Bug Tracker": f"https://github.com/{AUTHOR_USER_NAME}/{REPO_NAME}/issues",
     },
+    package_dir={'':'src'},
     packages=setuptools.find_packages(where='src')
 )
