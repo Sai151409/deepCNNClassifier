@@ -2,11 +2,11 @@
 requires = ['setuptools>=42.0', 'wheel']
 build-backend = 'setuptools.build_meta'
 
-[tootls.pytest.ini_options]
+[tool.pytest.ini_options]
 testpaths = [
     "test"
     ]
 
 [tool.mypy]
-mypay_path = 'src
+mypay_path = "src"
 ignore_missing_imports = true
