@@ -11,12 +11,11 @@ import joblib
 
 
 @ensure_annotations
-def read_yaml_file(file_path : Path) -> ConfigBox:
+def read_yaml_file(file_path: Path) -> ConfigBox:
     """read yaml file and return
 
     Args:
-        file_path (Path): path like input
-    
+        file_path (Path): path like input    
     Raises:
         ValueError : if yaml file is empty
         e : empty file
@@ -32,11 +31,11 @@ def read_yaml_file(file_path : Path) -> ConfigBox:
     except BoxValueError:
         raise ValueError("yaml file is empty")
     except Exception as e:
-        raise e 
+        raise e
 
    
 @ensure_annotations
-def create_directories(path_to_directories: list, verbose = True):
+def create_directories(path_to_directories: list, verbose=True):
     """create list of directories
 
     Args:
@@ -48,9 +47,9 @@ def create_directories(path_to_directories: list, verbose = True):
         if verbose:
             logger.info(f"created directory at : {path}")
 
-            
+
 @ensure_annotations
-def save_json(path: Path, data : dict):
+def save_json(path: Path, data: dict):
     """save json data
 
     Args:
@@ -60,8 +59,8 @@ def save_json(path: Path, data : dict):
     with open(file=path, mode='w') as f:
         json.dump(data, f, indent=4)
     logger.info(f"json file saved at : {path}")
- 
-    
+
+
 @ensure_annotations
 def load_json(path: Path) -> ConfigBox:
     """load the json file
@@ -87,8 +86,8 @@ def save_bin(data: Any, path: Path):
     """
     joblib.dump(value=data, filename=path)
     logger.info(f"binary file saved at {path}")
- 
-    
+
+
 @ensure_annotations
 def load_bin(path: Path) -> Any:
     """load binary data
