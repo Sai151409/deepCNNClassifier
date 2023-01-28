@@ -33,7 +33,7 @@ def read_yaml_file(file_path: Path) -> ConfigBox:
     except Exception as e:
         raise e
 
-   
+
 @ensure_annotations
 def create_directories(path_to_directories: list, verbose=True):
     """create list of directories
@@ -66,7 +66,7 @@ def load_json(path: Path) -> ConfigBox:
     """load the json file
 
     Args:
-        path (str): json  file path   
+        path (str): json file path
     Returns:
         ConfigBox : data as class attributes instead of dict
     """
