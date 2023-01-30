@@ -1,7 +1,7 @@
 from deepClassifier.utils import read_yaml_file, create_directories
 from deepClassifier.constant import CONFIG_FILE_PATH, PARAMS_FILE_PATH
 from deepClassifier.entity import DataIngestionConfig, PrepareBaseModelConfig, \
-    PrepareCallBackConfig, TrainingConfig
+    PrepareCallBackConfig, TrainingConfig, EvaluationConfig
 from pathlib import Path
 import os
 
@@ -79,3 +79,14 @@ class ConfigurationManager:
             params_is_augmentation=params.AUGMENTATION
             )
         return training_config
+    
+    
+    def get_evaluation_config(self)->EvaluationConfig:
+        evaluation_config = EvaluationConfig(
+            model_path=self.config.training.trained_model_path,
+            training_data=self.config.data_ingestion.unzip_dir,
+            all_params=self.params,
+            image_size = self.params.IMAGE_SIZE,
+            batch_size = self.params.BATCH
+        )
+        return evaluation_config
