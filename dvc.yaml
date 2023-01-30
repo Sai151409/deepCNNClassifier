@@ -3,6 +3,6 @@ stages:
     cmd: python src/deepClassifier/pipeline/stage_01_data_ingestion.py
     deps:
     - src/deepClassifier/pipeline/stage_01_data_ingestion.py
-    - conifgs/conifg.yaml
+    - configs/config.yaml
     outs:
     - artifacts/data_ingestion/PetImages
