@@ -138,3 +138,5 @@ artifacts/prepare_callbacks/checkpoint_dir/model.h5
 artifacts/prepare_callbacks/tensorboard_log_dir/tb_logs_at_2023-01-30-09-59-50/train/events.out.tfevents.1675052993.LAPTOP-APG3S4GN.15772.0.v2
 artifacts/prepare_callbacks/tensorboard_log_dir/tb_logs_at_2023-01-30-09-59-50/validation/events.out.tfevents.1675055644.LAPTOP-APG3S4GN.15772.1.v2
 artifacts/training/model.h5
+artifacts/prepare_callbacks/tensorboard_log_dir/tb_logs_at_2023-01-30-12-40-22/train/events.out.tfevents.1675062624.LAPTOP-APG3S4GN.25904.0.v2
+artifacts/prepare_callbacks/tensorboard_log_dir/tb_logs_at_2023-01-30-12-40-22/validation/events.out.tfevents.1675065242.LAPTOP-APG3S4GN.25904.1.v2
